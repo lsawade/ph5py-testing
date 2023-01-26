@@ -20,7 +20,7 @@ First step here, since you cloned this repo, is to enter
 cd /path/to/ph5test
 ```
 
-Then, we have to download the HDF5. Here, we chose to download version `1.12.2`
+Then, we have to download the HDF5. Here, we chose to download version `1.12.1`
 for no particular reason.
 
 ```bash
