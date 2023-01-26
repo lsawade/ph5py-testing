@@ -1,7 +1,7 @@
 #!/bin/env python
 
 from mpi4py import MPI
-import math
+1;95;0cimport math
 import h5py
 import numpy as np
 import sys

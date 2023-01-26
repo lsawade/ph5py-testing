@@ -72,4 +72,5 @@ where `LibLZF` is.
 
 `h5py_test.py` started very small but has eveolved a lot to test a bunch of things. This includes
 structure of the chunks, compression, quantization, and serial vs. parallel I/O, all of which are
-controlled at the top of the file in form of lists.
+controlled at the top of the file in form of lists. Make sure to change also the directory
+you are writing to `testdir`.
