@@ -13,8 +13,10 @@ size = comm.Get_size()
 def roundup(x, N):
     return math.ceil(x / N) * N
 
-# Changeable
-testdir="CHANGE THIS OTHERWISE THE SCRIPT MAKES NO SENSE"
+# MUST CHANGE
+testdir="/scratch/gpfs/lsawade" ### CHANGE THIS ###
+
+# CHANGEABLE
 Nchunksizes = [1000] #, 100, 10, 1]
 compressors = ['lzf'] #, 'gzip', None]'
 encoded = [0] #,1]
