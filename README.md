@@ -58,7 +58,7 @@ CC=$MPICC HDF5_MPI=$HDF5_MPI HDF5_DIR=$HDF5_DIR pip install --no-binary=h5py h5p
 Simply run the test script  
 
 ```bash
-mpiexec -n 4 python h5py_test.py
+mpiexec -n 3 python h5py_test.py
 ```
 
 To see whether writing worked, let's read the files
@@ -69,3 +69,7 @@ python h5py_read.py
 
 Note that we do not need `MPI` here. Also, for `h5dump` to work it needs to know
 where `LibLZF` is.
+
+`h5py_test.py` started very small but has eveolved a lot to test a bunch of things. This includes
+structure of the chunks, compression, quantization, and serial vs. parallel I/O, all of which are
+controlled at the top of the file in form of lists.
