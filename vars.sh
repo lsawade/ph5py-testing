@@ -1,8 +1,9 @@
 #!/bin/bash
-
+1;95;0c
 # Download link
-HDF5_LINK="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.1/src/hdf5-1.12.1.tar.gz"
+# HDF5_LINK="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.1/src/hdf5-1.12.1.tar.gz"
 
+HDF5_LINK="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.2/src/CMake-hdf5-1.12.2.tar.gz"
 
 # Package variables
 export ROOT_DIR=$(pwd)
@@ -17,4 +18,5 @@ export PATH=${HDF5_DIR}/bin:${PATH}
 
 # Compilers
 export MPICC=mpicc
+export MPICPP=mpic++
 export MPIF90=mpif90
