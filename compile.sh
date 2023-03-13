@@ -15,7 +15,7 @@ pwd
 echo $HDF5_DIR
 
 # Configuration
-./configure --enable-shared --enable-parallel \
+./configure --enable-shared --enable-parallel --disable-static \
     --enable-fortran --enable-fortran2003 \
     --prefix=$HDF5_DIR CC=$MPICC FC=$MPIF90
 
