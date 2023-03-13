@@ -1,5 +1,5 @@
 #!/bin/bash
-
+1;95;0c
 # Get Settings
 source ./vars.sh
 
@@ -16,7 +16,7 @@ pwd
 cd build
 echo $HDF5_DIR
 
-
+# Configuration
 cmake .. \
       --enable-shared \
       --enable-cxx \
@@ -24,12 +24,8 @@ cmake .. \
       --enable-parallel \
       CC=$MPICC CXX=$MPICPP FC=$FC
 
-# Configuration
-./configure --enable-shared --enable-parallel --disable-static \
-    --enable-fortran --enable-fortran2003 \
-    --prefix=$HDF5_DIR CC=$MPICC FC=$MPIF90
-
 # Installation
 make -j
+
 # make -j check
 make -j install
