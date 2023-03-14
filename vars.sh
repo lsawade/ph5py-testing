@@ -1,5 +1,5 @@
 #!/bin/bash
-1;95;0c
+
 # Download link
 # HDF5_LINK="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.12/hdf5-1.12.1/src/hdf5-1.12.1.tar.gz"
 
