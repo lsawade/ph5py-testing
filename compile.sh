@@ -1,5 +1,5 @@
 #!/bin/bash
-1;95;0c
+
 # Get Settings
 source ./vars.sh
 
@@ -14,18 +14,32 @@ mkdir build
 
 pwd
 cd build
-echo $HDF5_DIR
+pwd
 
-# Configuration
-cmake .. \
-      --enable-shared \
-      --enable-cxx \
-      --enable-fortran \
-      --enable-parallel \
-      CC=$MPICC CXX=$MPICPP FC=$FC
+# ./build-unix.sh
 
-# Installation
-make -j
+CC=$MPICC \
+  FC=$MPIF90 \
+  CXX=$MPICXX \
+  cmake -G "Unix Makefiles" \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=./phdf5 \
+  -DHDF5_ENABLE_PARALLEL=ON  \
+  -DBUILD_SHARED_LIBS=ON \
+  -DHDF5_BUILD_CPP_LIB=OFF \
+  -DHDF5_BUILD_FORTRAN=ON \
+  -DHDF5_ENABLE_THREADSAFE=OFF \
+  ../hdf5-1.12.2/
 
-# make -j check
-make -j install
+# # Configuration
+# CC=$MPICC CXX=$MPICPP FC=$MPIF90 \
+#   cmake .. 
+
+
+
+# # Installation
+# make -j
+
+# # make -j check
+# make -j install
+

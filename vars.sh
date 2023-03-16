@@ -18,5 +18,23 @@ export PATH=${HDF5_DIR}/bin:${PATH}
 
 # Compilers
 export MPICC=mpicc
-export MPICPP=mpic++
+export MPICXX=mpic++
 export MPIF90=mpif90
+
+
+echo "Loaded"
+echo "-----------------------------------------"
+echo "ROOT_DIR:      $ROOT_DIR"
+echo "HDF5_MAINDIR:  $HDF5_MAINDIR"
+echo "HDF5_DIR:      $HDF5_DIR"
+echo "HDF5_FC:       $HDF5_FC"
+echo "HDF5_CC:       $HDF5_CC"
+echo "MPIFC_HDF5:    $MPIFC_HDF5"
+echo "HDF5_MPI:      $HDF5_MPI"
+
+# Compilers
+echo ""
+echo "MPICC:  $MPICC"
+echo "MPICPP: $MPICPP"
+echo "MPIF90: $MPIF90"
+echo "-----------------------------------------"
